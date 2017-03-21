@@ -1,0 +1,9 @@
+{
+  "name": "hterm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "libapps": "https://chromium.googlesource.com/apps/libapps.git"
+  }
+}
