@@ -128,3 +128,7 @@ typings/
 
 # dotenv environment variables file
 .env
+
+# tarball
+*.tar.*
+*.txz
