@@ -31,6 +31,10 @@ type JMProject struct {
 
 const timestampLayout = "20060102"
 
+func init() {
+	log.SetFlags(log.Lshortfile)
+}
+
 func NewJMProject() *JMProject {
 	now := time.Now()
 	t := time.Date(now.Year(), now.Month(), 15, 0, 0, 0, 0, now.Location())
@@ -113,6 +117,9 @@ func (j *JMProject) Extract() error {
 		case tar.TypeReg: // = regular file
 			data := make([]byte, hdr.Size)
 			_, err := tarReader.Read(data)
+			if err == io.EOF {
+				break
+			}
 			if err != nil {
 				return err
 			}
