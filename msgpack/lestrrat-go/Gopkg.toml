@@ -1,0 +1,17 @@
+
+[[constraint]]
+  branch = "master"
+  name = "github.com/lestrrat-go/msgpack"
+
+[[constraint]]
+  name = "github.com/pkg/errors"
+  version = "0.8.0"
+
+[[constraint]]
+  name = "gopkg.in/vmihailenco/msgpack.v3"
+  version = "3.3.3"
+  source = "github.com/vmihailenco/msgpack"
+
+[prune]
+  go-tests = true
+  unused-packages = true
