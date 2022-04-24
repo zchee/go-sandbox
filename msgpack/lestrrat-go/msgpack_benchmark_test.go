@@ -1,5 +1,7 @@
 // +build bench
 
+// go test -v -tags bench -run='^$' -bench=. -benchmem .
+
 package msgpack_test
 
 import (
